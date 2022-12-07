@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
+import RecommendedAttractions from "./components/RecommendedAttractions";
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
       <Recommend />
       <Testimonials />
       <Footer />
+      {/* <RecommendedAttractions /> */}
     </div>
   );
 }

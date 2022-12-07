@@ -11,7 +11,7 @@ export default function Services() {
       icon: service1,
       title: "Best Deals Guaranteed",
       subTitle:
-        "We currate the best deals from all over the world, and we guarantee the best price",
+        "We currate the best deals from all over the world and make sure you get the best price.",
     },
     {
       icon: service2,
@@ -21,9 +21,9 @@ export default function Services() {
     },
     {
       icon: service3,
-      title: "Flexible Payment",
+      title: "Everlasting Memories",
       subTitle:
-        "If an attraction requires a ticket, we provide you with a link to purchase the ticket easily",
+        "We make sure that you have the best experience and make everlasting memories.",
     },
     {
       icon: service4,
