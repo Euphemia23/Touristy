@@ -5,16 +5,16 @@ import { AiFillInstagram } from "react-icons/ai";
 export default function Footer() {
   return (
     <FooterContainer>
-      <span>Copyright &copy; 2022 Touristy by Euphemia Agwa. All rights reserved</span>
+      <span>Copyright &copy; 2022 ReDI Touristy by Euphemia Agwa.</span>
       <ul className="links">
         <li>
           <a href="#hero">Home</a>
         </li>
         <li>
-          <a href="#services">About</a>
+          <a href="#services">Services</a>
         </li>
         <li>
-          <a href="#recommend">Attractions</a>
+          <a href="#recommend">Recommendation</a>
         </li>
         <li>
           <a href="#testimonials">Testimonials</a>

@@ -1,10 +1,41 @@
-import React from "react";
+import { useState } from 'react';
 import styled from "styled-components";
 import homeImage from "../assets/hero.png";
+import { TextField, Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { useNavigate } from "react-router-dom";
+
+
+const useStyles = makeStyles({
+  input: {
+    width: "100%", // this will make the input wider
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "transparent", // this will remove the black border
+      },
+      "&:hover fieldset": {
+        borderColor: "transparent", // this will remove the black border on hover
+      },
+    },
+  },
+  button: {
+    backgroundColor: "gray", // this will change the button's background color to gray
+    "&:hover": {
+      backgroundColor: "gray", // this will maintain the background color on hover
+      borderColor: "transparent", // this will remove the border on hover
+    },
+  },
+});
+
 
 
 
 export default function Hero() {
+  const [searchInput, setSearchInput] = useState('');
+  const classes = useStyles();
+  const destination = "test";
+  const navigate = useNavigate();
+
   return (
     <Section id="hero">
       <div className="background">
@@ -19,10 +50,30 @@ export default function Hero() {
         </div>
         <div className="search">
           <div className="container">
-            <label htmlFor="">Where you want to go</label>
-            <input type="text" placeholder="" />
+          <TextField
+            id="search-input"
+            placeholder="Search Attractions"
+            variant="outlined"
+            classes={{ root: classes.input }} // apply the custom styles to the input
+            value={searchInput}
+            onChange={(event) => setSearchInput(event.target.value)}
+            onKeyDown={(event) => {
+              // check if the pressed key is the Enter key
+              if (event.key === 'Enter') {
+                navigate("/searchresult", { state: { searchInput } });
+              }
+            }}
+          />
           </div>
-          <button>Explore Now</button>
+          <Button
+            variant="contained"
+            color="primary"
+            classes={{ root: classes.button }} // this will change the button's background color to blue
+            onClick={() => navigate("/searchresult", { state: { searchInput } })
+            }
+          >
+            Explore Now
+          </Button>
         </div>
       </div>
     </Section>
@@ -81,7 +132,7 @@ const Section = styled.section`
         padding: 0 1.5rem;
         label {
           font-size: 1.1rem;
-          color: #03045e;
+          color: #030202;
         }
         input {
           background-color: transparent;
@@ -106,7 +157,7 @@ const Section = styled.section`
         border-radius: 0.3rem;
         border: none;
         color: white;
-        background-color: #4361ee;
+        background-color: #494949;
         font-size: 1.1rem;
         text-transform: uppercase;
         transition: 0.3s ease-in-out;

@@ -9,9 +9,9 @@ export default function Services() {
   const data = [
     {
       icon: service1,
-      title: "Best Deals Guaranteed",
+      title: "100% Verified",
       subTitle:
-        "We currate the best deals from all over the world and make sure you get the best price.",
+        "We only list the best attractions in the world, so you don't have to worry about anything. 100% satisfaction guaranteed.",
     },
     {
       icon: service2,
@@ -59,9 +59,10 @@ const Section = styled.section`
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
-    background-color: aliceblue;
+    background-color: #dedfd8;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s ease-in-out;
+    border-radius: 1rem;
     &:hover {
       transform: translateX(0.4rem) translateY(-1rem);
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

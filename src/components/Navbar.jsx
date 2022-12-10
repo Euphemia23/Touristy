@@ -14,7 +14,9 @@ export default function Navbar() {
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
-            Touristy
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <p className="reditouristy">ReDI Touristy</p>
+            </Link>
           </div>
           <div className="toggle">
             {navbarState ? (
@@ -30,17 +32,17 @@ export default function Navbar() {
             <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#services">About</a>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <a href="#recommend">Attractions</a>
+            <a href="#recommend">Recommendations</a>
           </li>
           <li>
             <a href="#testimonials">Testimonials</a>
           </li>
         </ul>
         <Link to="/dataform">
-          <button className="btn">Add Data</button>
+          <button className="btn">Add Attractions</button>
         </Link>
       </Nav>
       <ResponsiveNav state={navbarState}>
@@ -88,6 +90,12 @@ const Nav = styled.nav`
   padding: 1rem 1rem;
   background: #ffffff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  .reditouristy {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+  }
   .brand {
     display: flex;
     align-items: center;

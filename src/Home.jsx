@@ -6,33 +6,31 @@ import Recommend from "./components/Recommend";
 import ScrollToTop from "./components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
-import scrollreveal from "scrollreveal";
-import RecommendedAttractions from "./components/RecommendedAttractions";
 
 
 export default function Home() {
-  useEffect(() => {
-    const sr = scrollreveal({
-      origin: "top",
-      distance: "80px",
-      duration: 2000,
-      reset: true,
-    });
-    sr.reveal(
-      `
-        nav,
-        #hero,
-        #services,
-        #recommend,
-        #testimonials,
-        footer
-        `,
-      {
-        opacity: 0,
-        interval: 300,
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   const sr = scrollreveal({
+  //     origin: "top",
+  //     distance: "80px",
+  //     duration: 2000,
+  //     reset: true,
+  //   });
+  //   sr.reveal(
+  //     `
+  //       nav,
+  //       #hero,
+  //       #services,
+  //       #recommend,
+  //       #testimonials,
+  //       footer
+  //       `,
+  //     {
+  //       opacity: 0,
+  //       interval: 300,
+  //     }
+  //   );
+  // }, []);
   return (
     <div>
       <ScrollToTop />
@@ -42,7 +40,6 @@ export default function Home() {
       <Recommend />
       <Testimonials />
       <Footer />
-      {/* <RecommendedAttractions /> */}
     </div>
   );
 }

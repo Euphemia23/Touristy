@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import avatarImage from "../assets/avatarImage.jpeg";
+import avatarImage from "../assets/avatarImage.jpg";
 export default function Testimonials() {
   return (
     <Section id="testimonials">
@@ -10,40 +10,37 @@ export default function Testimonials() {
       <div className="testimonials">
         <div className="testimonial">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            asperiores eaque.
+          We recently used this website to plan our vacation, and we were so impressed with the range of attractions it showed us. It made it easy to find things to do in the area, and we were able to discover some hidden gems that we wouldn't have known about otherwise. The website was user-friendly and the information was up-to-date and accurate. We would definitely use it again to plan our next trip!
           </p>
           <div className="info">
             <img src={avatarImage} alt="" />
             <div className="details">
-              <h4>Kishan Sheth</h4>
-              <span>CEO - Shashaan Web Solutions</span>
+              <h4>Euphemia Agwa</h4>
+              <span>ReDi School Student</span>
             </div>
           </div>
         </div>
         <div className="testimonial">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            asperiores eaque.
+          This website was a lifesaver when it came to planning our vacation. It showed us so many different options for attractions, and we were able to compare prices and reviews to make the best choices. We had a wonderful time at the attractions we visited, and we couldn't have done it without this website. Highly recommend!
           </p>
           <div className="info">
             <img src={avatarImage} alt="" />
             <div className="details">
-              <h4>Kishan Sheth</h4>
-              <span>CEO - Shashaan Web Solutions</span>
+            <h4>Euphemia Agwa</h4>
+              <span>ReDi School Student</span>
             </div>
           </div>
         </div>
         <div className="testimonial">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            asperiores eaque.
+          We had a great time on our vacation thanks to this website. It made it easy to find and book tickets to the attractions we wanted to see, and the map feature was really helpful for planning our itinerary. We also appreciated the discounts and deals we found on the website. Overall, a fantastic resource for anyone planning a trip.
           </p>
           <div className="info">
             <img src={avatarImage} alt="" />
             <div className="details">
-              <h4>Kishan Sheth</h4>
-              <span>CEO - Shashaan Web Solutions</span>
+            <h4>Euphemia Agwa</h4>
+              <span>ReDi School Student</span>
             </div>
           </div>
         </div>
