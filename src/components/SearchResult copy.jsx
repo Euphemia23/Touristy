@@ -14,7 +14,7 @@ export default function SearchResult() {
 
 
   async function fetchData() {
-    const response = await axios.get(`http://localhost:8000/attraction/search/${searchInput}`);
+    const response = await axios.get(`https://touristy.azurewebsites.net/attraction/search/${searchInput}`);
     // flatten the response data array using lodash
     const flattenedData = _.flattenDeep(response.data.data);
     setData(flattenedData);

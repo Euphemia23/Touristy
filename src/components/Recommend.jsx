@@ -27,7 +27,7 @@ export default function Recommend() {
    }
  
    useEffect(() => {
-     axios.get('http://localhost:8000/attraction')
+     axios.get('https://touristy.azurewebsites.net/attraction')
        .then((response) => {
          // flatten the response data array using lodash
          const flattenedData = _.flattenDeep(response.data.data);
