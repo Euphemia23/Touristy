@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios'; // added axios to make the GET request to the API
 import { useLocation } from 'react-router-dom';
 import _ from "lodash";
@@ -36,20 +36,20 @@ export default function SearchResult() {
      }
    }
 
-  async function fetchData() {
+   const fetchData = useCallback(async () => {
     const response = await axios.get(`http://localhost:8000/attraction/search/${searchInput}`);
     // flatten the response data array using lodash
     const flattenedData = _.flattenDeep(response.data.data);
     setData(flattenedData);
     console.log(flattenedData);
-  }
+  }, [searchInput]);
 
   const titleCaseSearchInput = searchInput.charAt(0).toUpperCase() + searchInput.slice(1);
 
   useEffect(() => {
     console.log(searchInput);
     fetchData();
-  }, []);
+  }, [searchInput, fetchData]);
 
 
   return (

@@ -33,7 +33,6 @@ const useStyles = makeStyles({
 export default function Hero() {
   const [searchInput, setSearchInput] = useState('');
   const classes = useStyles();
-  const destination = "test";
   const navigate = useNavigate();
 
   return (
