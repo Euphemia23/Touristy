@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -9,28 +8,7 @@ import Testimonials from "./components/Testimonials";
 
 
 export default function Home() {
-  // useEffect(() => {
-  //   const sr = scrollreveal({
-  //     origin: "top",
-  //     distance: "80px",
-  //     duration: 2000,
-  //     reset: true,
-  //   });
-  //   sr.reveal(
-  //     `
-  //       nav,
-  //       #hero,
-  //       #services,
-  //       #recommend,
-  //       #testimonials,
-  //       footer
-  //       `,
-  //     {
-  //       opacity: 0,
-  //       interval: 300,
-  //     }
-  //   );
-  // }, []);
+
   return (
     <div>
       <ScrollToTop />
