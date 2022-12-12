@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import _ from "lodash";
@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Recommend() {
   const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const images = [art, leisure, history, nature, memorial, museum];
@@ -25,22 +26,26 @@ export default function Recommend() {
        selectedImages.push(selectedImage);
      }
    }
- 
-   useEffect(() => {
-     axios.get('https://touristy.azurewebsites.net/attraction')
-       .then((response) => {
-         // flatten the response data array using lodash
-         const flattenedData = _.flattenDeep(response.data.data);
-         
-         // return random 6 items from the flattened array
-         const randomData = _.sampleSize(flattenedData, 6);
-         setData(randomData);
-       })
-     .catch((error) => {
-       // handle error
-       console.error(error);
-     });
- }, []);
+
+   const fetchData = useCallback(async () => {
+    try {
+      const response = await axios.get("https://touristy.azurewebsites.net/attraction");
+      // flatten the response data array using lodash
+      console.log(response.data.data);
+      const flattenedData = _.flattenDeep(response.data.data);
+      // return random 6 items from the flattened array
+      const randomData = _.sampleSize(flattenedData, 6);
+      setData(randomData);
+      console.log(randomData);
+    }
+    catch (error) {
+      setError(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
  
    return (
      <Section id="recommend">
@@ -93,6 +98,9 @@ export default function Recommend() {
              </div>
            );
          })}
+       </div>
+       <div>
+         {console.log("API error " + error)}
        </div>
      </Section>
    );
