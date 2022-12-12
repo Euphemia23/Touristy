@@ -29,7 +29,7 @@ export default function Recommend() {
 
    const fetchData = useCallback(async () => {
     try {
-      const response = await axios.get("https://touristy.azurewebsites.net/attraction");
+      const response = await axios.get("https://touristy.azurewebsites.net/attraction/getall");
       // flatten the response data array using lodash
       console.log(response.data.data);
       const flattenedData = _.flattenDeep(response.data.data);
