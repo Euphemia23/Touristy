@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Touristy - The Ultimate Travel Attraction App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Touristy is a web app that provides information on tourist attractions around the world. Built with ReactJS, Touristy allows users to search for attractions by location and category, providing detailed information on each attraction, including opening hours, admission fees, and user ratings. With Touristy, travelers can easily plan their trips and discover new places to visit.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Search for attractions by location and category using the Google Maps API
+- Access detailed information on each attraction, including opening hours, admission fees, and more
+- View photos and ratings from other travelers
+- Save your favorite attractions and create custom itineraries
+- Available on both desktop and mobile devices
+- Constantly updating database of attractions
+- Integration with other travel planning tools and services
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Visit [our website](https://www.touristy.tech) to use the app
+2. Search for attractions by location and category
+3. View detailed information on each attraction and plan your trip
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Support
 
-### `npm test`
+If you have any questions or need help getting started, please contact us at [support@touristy.com](mailto:support@touristy.com).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
 
-### `npm run build`
+Feel free to create a pull request with changes you wish to add. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Touristy is licensed under the [MIT License](LICENSE).
