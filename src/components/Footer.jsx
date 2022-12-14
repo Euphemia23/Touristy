@@ -1,24 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 export default function Footer() {
+  const location = useLocation();	
+
+  useEffect(() => {
+    const elementId = location.hash.replace("#", "");
+    const element = document.getElementById(elementId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location.hash]);
+
+
   return (
     <FooterContainer>
       <span>Copyright &copy; 2022 ReDI Touristy by Euphemia Agwa.</span>
       <ul className="links">
-        <li>
-          <a href="#hero">Home</a>
-        </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#recommend">Recommendation</a>
-        </li>
-        <li>
-          <a href="#testimonials">Testimonials</a>
-        </li>
+      <li>
+            <Link to={{ pathname: "/", hash: "#home" }}>Home</Link>
+          </li>
+          <li>
+            <Link to={{ pathname: "/", hash: "#services" }}>Services</Link>
+          </li>
+          <li>
+            <Link to={{ pathname: "/", hash: "#recommend" }}>Recommendations</Link>
+          </li>
+          <li>
+            <Link to={{ pathname: "/", hash: "#testimonials" }}>Testimonials</Link>
+          </li>
       </ul>
       <ul className="social__links">
         <li>

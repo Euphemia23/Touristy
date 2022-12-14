@@ -65,7 +65,7 @@ export default function SearchResult() {
        <div className="destinations">
         {data.length === 0 ? (
             <div className="noResults">
-                <h3>No results found for {titleCaseSearchInput}</h3>
+                <h3>No attraction available for {titleCaseSearchInput}</h3>
             </div>
         ) : (
             data.map((destination) => {
