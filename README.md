@@ -2,6 +2,9 @@
 
 Touristy is a web app that provides information on tourist attractions around the world. Built with ReactJS, Touristy allows users to search for attractions by location and category, providing detailed information on each attraction, including opening hours, admission fees, and user ratings. With Touristy, travelers can easily plan their trips and discover new places to visit.
 
+<img width="944" alt="frontend" src="https://user-images.githubusercontent.com/71856058/207555670-327d9b3f-c5ae-4b9b-b598-4fe59c61419b.PNG">
+
+
 ## Features
 
 - Search for attractions by location and category using the Google Maps API
