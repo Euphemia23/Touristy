@@ -23,7 +23,7 @@ Touristy is a web app that provides information on tourist attractions around th
 
 ## Support
 
-If you have any questions or need help getting started, please contact us at [support@touristy.com](mailto:support@touristy.com).
+If you have any questions or need help getting started, please contact us at [agwaeuphemia21@gmail.com](mailto:agwaeuphemia21@gmail.com).
 
 ## Contributing
 
