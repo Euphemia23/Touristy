@@ -10,7 +10,7 @@ Touristy is a web app that provides information on tourist attractions around th
 - Search for attractions by location and category using the Google Maps API
 - Access detailed information on each attraction, including opening hours, admission fees, and more
 - View photos and ratings from other travelers
-- Save your favorite attractions and create custom itineraries
+- Save your favorite attractions and create custom itineraries (upcoming)
 - Available on both desktop and mobile devices
 - Constantly updating database of attractions
 - Integration with other travel planning tools and services
