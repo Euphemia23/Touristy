@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
@@ -7,17 +6,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    const elementId = location.hash.replace("#", "");
-    const element = document.getElementById(elementId);
-
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location.hash]);
-  
   return (
     <>
       <Nav>
@@ -41,16 +29,16 @@ export default function Navbar() {
 
         <ul>
           <li>
-            <Link to={{ pathname: "/", hash: "#home" }}>Home</Link>
+            <a href="#home">Home</a>
           </li>
           <li>
             <Link to={{ pathname: "/", hash: "#services" }}>Services</Link>
           </li>
           <li>
-            <Link to={{ pathname: "/", hash: "#recommend" }}>Recommendations</Link>
+            <a href="#recommend">Recommendations</a>
           </li>
           <li>
-            <Link to={{ pathname: "/", hash: "#testimonials" }}>Testimonials</Link>
+            <a href="#testimonials">Testimonials</a>
           </li>
         </ul>
         <Link to="/dataform">
@@ -60,27 +48,27 @@ export default function Navbar() {
       <ResponsiveNav state={navbarState}>
         <ul>
           <li>
-            <Link to={{ pathname: "/", hash: "#home" }} onClick={() => setNavbarState(false)}>
+            <a href="#home" onClick={() => setNavbarState(false)}>
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to={{ pathname: "/", hash: "#services" }} onClick={() => setNavbarState(false)}>
+            <a href="#services" onClick={() => setNavbarState(false)}>
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to={{ pathname: "/", hash: "#recommend" }} onClick={() => setNavbarState(false)}>
-              Recommendations
-            </Link>
+            <a href="#recommend" onClick={() => setNavbarState(false)}>
+              Attractions
+            </a>
           </li>
           <li>
-            <Link to={{ pathname: "/", hash: "#testimonials" }} onClick={() => setNavbarState(false)}>
+            <a href="#testimonials" onClick={() => setNavbarState(false)}>
               Testimonials
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/dataform" onClick={() => setNavbarState(false)}>
+            <Link to="/dataform">
               Add Data
             </Link>
           </li>
