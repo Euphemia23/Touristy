@@ -74,7 +74,7 @@ export default function DataForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://touristy.azurewebsites.net/attraction/", {
+      .post("https://touristy.onrender.com/attraction/", {
         name: name,
         description: description,
         rating: rating,

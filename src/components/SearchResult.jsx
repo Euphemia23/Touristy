@@ -37,7 +37,7 @@ export default function SearchResult() {
    }
 
    const fetchData = useCallback(async () => {
-    const response = await axios.get(`https://touristy.azurewebsites.net/attraction/search/${searchInput}`);
+    const response = await axios.get(`https://touristy.onrender.com/attraction/search/${searchInput}`);
     // flatten the response data array using lodash
     const flattenedData = _.flattenDeep(response.data.data);
     setData(flattenedData);
